@@ -52,7 +52,6 @@ class _TodoListPageState extends State<TodoListPage> {
         ),
       ),
       floatingActionButton: Row(
-        // crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
