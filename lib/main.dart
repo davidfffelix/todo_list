@@ -1,36 +1,26 @@
 import 'package:flutter/material.dart';
 
-class TodoListPage extends StatefulWidget {
-  const TodoListPage({super.key});
+import 'todo_list_page.dart';
 
-  @override
-  State<TodoListPage> createState() => _TodoListPageState();
+main() {
+  runApp(
+    const MyApp(),
+  );
 }
 
-class _TodoListPageState extends State<TodoListPage> {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Lista de Tarefas',
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.green,
         ),
       ),
-      body: Container(
-        padding: const EdgeInsets.all(24),
-        child: const Column(
-          children: [
-            TextField()
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
-        onPressed: () {},
-        child: const Icon(
-          Icons.add,
-        ),
-      ),
+      home: const TodoListPage(),
     );
   }
 }
